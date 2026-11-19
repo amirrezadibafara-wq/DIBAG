@@ -253,22 +253,49 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 .video-fallback{min-height:260px;display:flex;flex-direction:column;align-items:center;justify-content:center;text-align:center;gap:10px;padding:35px 20px;background:radial-gradient(circle at 50% 35%,#3e7eff35,transparent 48%),linear-gradient(145deg,#0a1428,#101b34);border-radius:15px;color:#eaf4ff}.video-fallback.hidden{display:none!important}.video-fallback-icon{width:62px;height:62px;border-radius:20px;display:grid;place-items:center;background:linear-gradient(145deg,#a8f0ff,#7793ff);color:#07152c;font-size:24px;box-shadow:0 12px 30px #438eff55}.video-fallback b{font-size:16px}.video-fallback p{font-size:11px;line-height:2;color:#9fb2d4}.video-fallback code{color:#a4eaff;background:#ffffff0c;padding:3px 7px;border-radius:6px}.video-fallback small{font-size:8px;letter-spacing:2px;color:#6eaee8}.order-length-note{display:block;color:#8199bf;font-size:9px;margin-top:7px}
 </style><meta content="DIBAG Studio — استودیوی تجربه‌های دیجیتال" property="og:title"><meta content="طراحی وب‌سایت اختصاصی، فروشگاه اینترنتی، داشبورد و تجربه‌های تعاملی با هویت بصری DIBAG." property="og:description"><meta content="website" property="og:type">
 <style id="dibag-google-form-styles">
-.google-form-panel{padding:clamp(14px,2.5vw,28px);overflow:hidden;border-color:#77baff55;background:linear-gradient(145deg,rgba(19,34,60,.94),rgba(7,13,27,.96));box-shadow:0 26px 70px #0007,inset 0 1px #ffffff16}
+.google-form-panel{position:relative;padding:clamp(16px,2.7vw,30px);overflow:hidden;border:1px solid #77baff55;border-radius:26px;background:radial-gradient(ellipse at 8% 0%,rgba(62,139,255,.16),transparent 38%),linear-gradient(145deg,rgba(19,34,60,.97),rgba(7,13,27,.98));box-shadow:0 26px 70px #0007,inset 0 1px #ffffff19}
+.google-form-panel:before{content:"";position:absolute;inset:0 12% auto;height:1px;background:linear-gradient(90deg,transparent,#9bd8ff99,transparent);pointer-events:none}
 .google-form-intro{display:flex;align-items:center;gap:14px;flex-wrap:wrap;padding:4px 3px 20px}
-.google-form-mark{width:48px;height:48px;display:grid;place-items:center;flex:0 0 auto;border-radius:16px;background:linear-gradient(145deg,#f8fbff,#b9d9ff);color:#173a70;font-size:22px;box-shadow:0 9px 26px #5caaff35,inset 0 1px #fff}
+.google-form-mark{width:50px;height:50px;display:grid;place-items:center;flex:0 0 auto;border-radius:17px;background:linear-gradient(145deg,#f8fbff,#b9d9ff);color:#173a70;font-size:22px;box-shadow:0 9px 26px #5caaff35,inset 0 1px #fff}
 .google-form-intro-copy{display:grid;gap:5px;flex:1;min-width:180px}
-.google-form-intro-copy strong{font-size:15px;color:#f1f7ff}
+.google-form-intro-copy strong{font-size:15px;color:#f1f7ff;letter-spacing:-.2px}
 .google-form-intro-copy span{font-size:11px;line-height:1.9;color:#a9bad5}
-.google-form-live{display:inline-flex;align-items:center;gap:7px;padding:8px 12px;border:1px solid #65d9b34d;border-radius:99px;background:#1cbb8511;color:#9ce9cb;font-size:10px;font-weight:800}
+.google-form-live{display:inline-flex;align-items:center;gap:8px;padding:9px 13px;border:1px solid #65d9b34d;border-radius:99px;background:#1cbb8511;color:#9ce9cb;font-size:10px;font-weight:800;white-space:nowrap}
 .google-form-live i{width:7px;height:7px;border-radius:50%;background:#53dfa4;box-shadow:0 0 12px #53dfa4;display:inline-block}
-.google-form-frame-wrap{overflow:hidden;border-radius:18px;background:#fff;border:1px solid #b9d7ff70;box-shadow:0 15px 45px #0004}
-.google-form-frame{display:block;width:100%;height:1320px;border:0;background:#fff}
+.google-form-frame-wrap{position:relative;overflow:hidden;padding:4px;border-radius:21px;background:linear-gradient(135deg,#a6dcff,#648fff 48%,#a88bff);box-shadow:0 18px 48px #0006,0 0 0 1px #b9d7ff22}
+.google-form-frame{position:relative;display:block;width:100%;height:1320px;border:0;border-radius:17px;background:#fff}
+.google-form-frame[title^="فرم حساب کاربری"]{height:1030px}
 .google-form-footer{display:flex;justify-content:space-between;align-items:center;flex-wrap:wrap;gap:12px;padding:17px 3px 2px;color:#a9bad5;font-size:10px;line-height:2}
-.google-form-footer span{display:inline-flex;align-items:flex-start;gap:7px;max-width:620px}
+.google-form-footer span{display:inline-flex;align-items:flex-start;gap:8px;max-width:620px}
 .google-form-footer span i{color:#8dcaff;margin-top:5px}
-.google-form-footer a{color:#a9d7ff;font-weight:800}
-.google-form-footer a:hover{color:#fff}
-@media(max-width:600px){.google-form-panel{padding:12px;border-radius:20px}.google-form-intro{gap:10px;padding-bottom:14px}.google-form-mark{width:42px;height:42px;border-radius:14px}.google-form-intro-copy strong{font-size:13px}.google-form-live{font-size:9px;padding:7px 10px}.google-form-frame-wrap{border-radius:13px}.google-form-frame{height:1450px}.google-form-footer{font-size:9px;gap:9px}}
+.google-form-footer a{color:#a9d7ff;font-weight:800;text-decoration:none;transition:color .2s ease}
+.google-form-footer a:hover{color:#fff;text-decoration:underline;text-underline-offset:4px}
+#confirmAccountForm{margin-top:8px;min-height:48px}
+#accountGateStatus{margin-top:10px}
+@media(max-width:600px){.google-form-panel{padding:12px;border-radius:21px}.google-form-intro{gap:10px;padding-bottom:14px}.google-form-mark{width:43px;height:43px;border-radius:14px}.google-form-intro-copy strong{font-size:13px}.google-form-intro-copy span{font-size:10px}.google-form-live{font-size:9px;padding:7px 10px}.google-form-frame-wrap{padding:3px;border-radius:15px}.google-form-frame{height:1450px;border-radius:12px}.google-form-frame[title^="فرم حساب کاربری"]{height:1160px}.google-form-footer{font-size:9px;gap:9px}}
+@media(prefers-reduced-motion:no-preference){.google-form-mark{transition:transform .25s ease}.google-form-panel:hover .google-form-mark{transform:translateY(-2px)}}
+
+/* DIBAG: compact Google Forms viewport — trims empty side space */
+#order .google-form-frame-wrap,
+#account .google-form-frame-wrap{
+  width:min(100%, 680px);
+  margin:22px auto 0;
+  box-sizing:border-box;
+}
+#order .google-form-frame,
+#account .google-form-frame{
+  width:100%;
+  display:block;
+  margin:0 auto;
+}
+@media(max-width:700px){
+  #order .google-form-frame-wrap,
+  #account .google-form-frame-wrap{
+    width:100%;
+    margin-top:14px;
+  }
+}
+
 </style>
 
 </head>
@@ -448,7 +475,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
     <span class="google-form-live"><i></i> فرم رسمی Google Forms</span>
   </div>
   <div class="google-form-frame-wrap">
-    <iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" title="فرم ثبت درخواست DIBAG در Google Forms" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true">
+    <iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" title="فرم ثبت درخواست DIBAG در Google Forms" width="100%" height="1320" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
       درحال بارگذاری فرم…
     </iframe>
   </div>
@@ -470,7 +497,7 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
     <span class="google-form-live"><i></i> Google Forms</span>
   </div>
   <div class="google-form-frame-wrap">
-    <iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" title="فرم حساب کاربری DIBAG در Google Forms" width="100%" height="1030" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true">
+    <iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" title="فرم حساب کاربری DIBAG در Google Forms" width="100%" height="1030" frameborder="0" marginheight="0" marginwidth="0" loading="lazy" referrerpolicy="strict-origin-when-cross-origin">
       درحال بارگذاری فرم حساب کاربری…
     </iframe>
   </div>
@@ -555,7 +582,8 @@ if(accountFormConfirm){
    const status=document.getElementById('accountGateStatus');
    if(status)status.textContent='وضعیت: تأیید شد؛ اکنون می‌توانی ثبت سفارش کنی.';
    accountFormConfirm.innerHTML='<i class="fa-solid fa-check"></i> حساب کاربری تأیید شد';
-   toast('دسترسی ثبت سفارش در این مرورگر فعال شد.');
+   toast('فرم تأیید شد؛ در حال انتقال به صفحه ایجاد سفارش…');
+   setTimeout(()=>go('order'),450);
   }catch(err){toast('ذخیره وضعیت در مرورگر ممکن نشد.');}
  });
 }
@@ -645,7 +673,10 @@ document.getElementById('registerForm').addEventListener('submit',async e=>{
   users.push({name,email,phone,passwordHash,createdAt:new Date().toISOString()});
   if(!write('dibag_users',users))return;
   if(!write('dibag_session',{name,email,phone}))return;
-  e.target.reset();renderAccount();syncOrderForm();toast('حساب نمایشی ایجاد شد.'); 
+  // Successful account creation unlocks the order page and opens it automatically.
+  try{localStorage.setItem('dibag_account_form_submitted','yes');}catch(err){}
+  e.target.reset();renderAccount();syncOrderForm();toast('حساب ایجاد شد؛ صفحه ایجاد سفارش باز می‌شود.');
+  setTimeout(()=>go('order'),450);
  }catch(err){toast(err.message||'خطا در ایجاد حساب.')}
 });
 document.getElementById('loginForm').addEventListener('submit',async e=>{
@@ -662,6 +693,7 @@ document.getElementById('loginForm').addEventListener('submit',async e=>{
   }
   if(!write('dibag_session',{name:user.name,email:user.email,phone:user.phone}))return;
   e.target.reset();renderAccount();syncOrderForm();toast('با موفقیت وارد شدید.');
+  if(localStorage.getItem('dibag_account_form_submitted')==='yes')setTimeout(()=>go('order'),450);
  }catch(err){toast(err.message||'خطا در ورود.')}
 });
 document.getElementById('logoutBtn').addEventListener('click',()=>{
