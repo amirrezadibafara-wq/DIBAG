@@ -216,6 +216,29 @@ footer{border-color:#2a3856;color:#9eacc8;background:#070b16aa}
 }
 @media(prefers-reduced-motion:reduce){*,*:before,*:after{animation-duration:.01ms!important;animation-iteration-count:1!important;scroll-behavior:auto!important;transition-duration:.01ms!important}}
 
+/* DIBAG portfolio loader — lively showcase preview */
+.portfolio-loader{position:fixed;inset:0;z-index:9999;display:grid;place-items:center;padding:20px;background:rgba(3,8,20,.94);backdrop-filter:blur(18px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s ease,visibility .22s ease}
+.portfolio-loader.show{opacity:1;visibility:visible;pointer-events:auto}
+.portfolio-loader-box{width:min(390px,92vw);display:flex;flex-direction:column;align-items:center;gap:12px;padding:25px 25px 22px;border:1px solid #7fcaff55;border-radius:26px;background:radial-gradient(circle at 50% 5%,#3769b52c,transparent 48%),linear-gradient(145deg,#152747,#0a1328);box-shadow:0 25px 80px #0009,0 0 50px #438dff25;text-align:center;overflow:hidden}
+.portfolio-loader-kicker{font-size:9px;letter-spacing:2.5px;color:#8edfff;display:flex;align-items:center;gap:8px}
+.portfolio-loader-kicker i{animation:loaderTwinkle .8s ease-in-out infinite alternate}
+.portfolio-loader-preview{height:142px;width:100%;position:relative;display:grid;place-items:center;perspective:500px}
+.preview-tile{position:absolute;width:88px;height:104px;border-radius:17px;display:flex;flex-direction:column;align-items:center;justify-content:center;gap:9px;border:1px solid #a5dcff77;box-shadow:0 15px 35px #0007,inset 0 1px #ffffff55}
+.preview-tile i{font-size:27px}.preview-tile b{font-size:9px;letter-spacing:2px}
+.tile-back{transform:translateX(-47px) rotate(-13deg) scale(.88);background:linear-gradient(145deg,#283f75,#172449);color:#8dcfff;animation:tileBack .95s ease-in-out infinite alternate}
+.tile-front{transform:translateX(22px) rotate(8deg);background:linear-gradient(145deg,#b5f4ff,#6d91ff 65%,#9a82ff);color:#09172e;z-index:2;animation:tileFront .95s ease-in-out infinite alternate}
+.preview-orbit{position:absolute;width:180px;height:92px;border:1px dashed #76caff55;border-radius:50%;transform:rotate(-18deg);animation:previewOrbit 2.2s linear infinite}
+.portfolio-loader-box strong{font-size:14px;color:#f0f7ff}.portfolio-loader-box span{font-size:10px;color:#a9c2e8;min-height:18px}
+.portfolio-progress{width:82%;height:5px;border-radius:20px;background:#ffffff15;overflow:hidden;margin-top:3px}
+.portfolio-progress i{display:block;width:42%;height:100%;border-radius:20px;background:linear-gradient(90deg,#62dfff,#648eff,#b28bff);box-shadow:0 0 15px #66baff;animation:progressTravel 1.15s cubic-bezier(.4,0,.2,1) forwards}
+.portfolio-loader-foot{font-size:9px;color:#718fb9}.portfolio-loader-foot i{color:#83dfff;margin-left:5px}
+@keyframes loaderTwinkle{to{transform:rotate(18deg) scale(1.18);opacity:.65}}
+@keyframes tileBack{to{transform:translateX(-57px) rotate(-18deg) scale(.9)}}
+@keyframes tileFront{to{transform:translateX(30px) rotate(12deg) translateY(-5px)}}
+@keyframes previewOrbit{to{transform:rotate(342deg)}}
+@keyframes progressTravel{from{transform:translateX(130%)}to{transform:translateX(-240%)}}
+@media(prefers-reduced-motion:reduce){.portfolio-loader *{animation:none!important}.portfolio-progress i{width:100%}}
+
 </style>
 <meta content="strict-origin-when-cross-origin" name="referrer">
 <meta content="index,follow" name="robots">
@@ -298,7 +321,20 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 
 </style>
 </head>
-<body><div aria-hidden="true" id="scrollProgress" style="transform: scaleX(0);"></div>
+<body>
+<div id="portfolioLoader" class="portfolio-loader" aria-hidden="true" role="status" aria-live="polite">
+ <div class="portfolio-loader-box">
+  <div class="portfolio-loader-kicker"><i class="fa-solid fa-sparkles"></i> DIBAG SHOWCASE</div>
+  <div class="portfolio-loader-preview" aria-hidden="true">
+   <div class="preview-tile tile-back"><i class="fa-solid fa-code"></i></div>
+   <div class="preview-tile tile-front"><i class="fa-regular fa-images"></i><b>HTML</b></div>
+   <div class="preview-orbit"></div>
+  </div>
+  <strong id="portfolioLoaderTitle">Loading...</strong>
+  <div class="portfolio-progress"><i></i></div>
+ </div>
+</div>
+<div aria-hidden="true" id="scrollProgress" style="transform: scaleX(0);"></div>
 <header>
 <div class="nav">
 <a class="brand" data-page="home" href="#home"><span class="brand-mark">D</span><span>DIBAG<span style="color:#8d95a4">.</span></span></a>
@@ -540,8 +576,21 @@ function loadGoogleForm(page){
  const frame=document.querySelector('#'+page+' iframe.google-form-frame');
  if(frame && !frame.src && frame.dataset.src){ frame.src=frame.dataset.src; }
 }
-function go(page){
+function go(page, skipPortfolioLoader=false){
  if(!document.getElementById(page))return;
+ if(page==='portfolio' && currentPage!=='portfolio' && !skipPortfolioLoader){
+  const loader=document.getElementById('portfolioLoader');
+  if(loader){
+   loader.classList.add('show');
+   loader.setAttribute('aria-hidden','false');
+   window.setTimeout(()=>{
+    loader.classList.remove('show');
+    loader.setAttribute('aria-hidden','true');
+    go(page,true);
+   },1250);
+   return;
+  }
+ }
  if(page==='order' && localStorage.getItem('dibag_account_form_submitted')!=='yes'){
   toast('ابتدا فرم حساب کاربری را تکمیل و ارسال کن.');
   page='account';
