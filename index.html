@@ -1,4 +1,20 @@
-<html dir="rtl" lang="fa"><head>
+<html dir="rtl" lang="fa" class=""><head>
+<style id="dibag-no-old-version-flash">
+html.dibag-boot header,html.dibag-boot main,html.dibag-boot footer{visibility:hidden!important;opacity:0!important}
+html.dibag-boot #dibagBootSplash{visibility:visible!important;opacity:1!important}
+#dibagBootSplash{position:fixed;inset:0;z-index:100000;display:flex;align-items:center;justify-content:center;background:radial-gradient(ellipse at 50% 35%,#18376d 0,transparent 42%),linear-gradient(145deg,#050914,#090e1c 55%,#090a16);transition:opacity .35s ease,visibility .35s ease}
+#dibagBootSplash .boot-box{width:min(360px,88vw);padding:30px 24px;text-align:center;border:1px solid #79baff45;border-radius:25px;background:linear-gradient(145deg,#152544,#0b1428);box-shadow:0 25px 70px #0008,0 0 45px #408bff20}
+#dibagBootSplash .boot-logo{width:64px;height:64px;margin:0 auto 15px;display:grid;place-items:center;border-radius:20px;background:linear-gradient(145deg,#a7f1ff,#7094ff 65%,#a18aff);color:#07152c;font:bold 35px Vazirmatn,sans-serif;box-shadow:0 10px 30px #4c8fff55}
+#dibagBootSplash strong{display:block;color:#f2f7ff;font:900 20px Vazirmatn,sans-serif;letter-spacing:3px}
+#dibagBootSplash p{margin-top:8px;color:#9eb9e0;font:11px Vazirmatn,sans-serif}
+#dibagBootSplash .boot-line{height:4px;width:100%;overflow:hidden;border-radius:8px;background:#ffffff14;margin-top:22px}
+#dibagBootSplash .boot-line i{display:block;width:35%;height:100%;border-radius:8px;background:linear-gradient(90deg,#65e2ff,#6594ff,#b18bff);animation:dibagBootMove 1.15s ease-in-out infinite alternate}
+@keyframes dibagBootMove{to{transform:translateX(185%)}}
+html.dibag-boot #dibagBootSplash{visibility:visible;opacity:1}
+html:not(.dibag-boot) #dibagBootSplash{opacity:0;visibility:hidden;pointer-events:none}
+</style>
+<script>document.documentElement.classList.add('dibag-boot');</script>
+
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="#080b16" name="theme-color">
@@ -329,6 +345,8 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 </style>
 </head>
 <body>
+
+
 <div id="portfolioLoader" class="portfolio-loader" aria-hidden="true" role="status" aria-live="polite">
  <div class="portfolio-loader-box">
   <div class="portfolio-loader-kicker"><i class="fa-solid fa-sparkles"></i> DIBAG SHOWCASE</div>
@@ -1289,6 +1307,10 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
   });
 })();
 
+</script>
+
+<script id="dibag-no-old-version-flash-release">
+(()=>{let done=false;const reveal=()=>{if(done)return;done=true;document.documentElement.classList.remove('dibag-boot');const splash=document.getElementById('dibagBootSplash');if(splash){splash.setAttribute('aria-hidden','true');setTimeout(()=>splash.remove(),450)}};window.addEventListener('load',reveal,{once:true});setTimeout(reveal,2600);})();
 </script>
 
 <style id="dibag-watermark-laptop-fix">
