@@ -20,6 +20,9 @@ html:not(.dibag-boot) #dibagBootSplash{opacity:0;visibility:hidden;pointer-event
 #dibagInstallGuide .guide-os-icon.windows i{font-size:24px}
 </style>
 <script>document.documentElement.classList.add('dibag-boot');</script>
+<meta http-equiv="Content-Security-Policy" content="default-src 'self'; script-src 'self' 'unsafe-inline'; style-src 'self' 'unsafe-inline' https://fonts.googleapis.com https://cdnjs.cloudflare.com; font-src 'self' https://fonts.gstatic.com https://cdnjs.cloudflare.com data:; img-src 'self' data: blob: https:; media-src 'self' blob: https:; frame-src https://docs.google.com; connect-src 'self'; object-src 'none; base-uri 'self'; form-action 'self' https://docs.google.com; upgrade-insecure-requests">
+<meta http-equiv="Referrer-Policy" content="strict-origin-when-cross-origin">
+<meta http-equiv="Permissions-Policy" content="camera=(), microphone=(), geolocation=(), payment=()">
 <meta charset="utf-8">
 <meta content="width=device-width, initial-scale=1.0" name="viewport">
 <meta content="#080b16" name="theme-color">
@@ -406,7 +409,6 @@ h3{font-weight:750;line-height:1.65}
 <button class="active" data-page="home">خانه</button>
 <button class="" data-page="services">خدمات HTML</button>
 <button class="" data-page="portfolio">نمونه‌کدها</button>
-<button class="" data-page="pricing">تعرفه کدنویسی</button>
 <button class="" data-page="order">ثبت سفارش کد</button>
 <button class="" data-page="account">حساب کاربری</button>
 </nav>
@@ -450,7 +452,7 @@ h3{font-weight:750;line-height:1.65}
 <div class="motion-stats">
 <article class="motion-stat" style="--mx: 20.75335693359375px; --my: 124.4693603515625px;"><i class="fa-solid fa-bolt"></i><strong class="count-up" data-count="1" data-done="1">۱</strong><span>شناخت و ایده‌پردازی</span><small>شروع با نیاز واقعی پروژه</small></article>
 <article class="motion-stat" style="--mx: 21.75335693359375px; --my: 134.4693603515625px;"><i class="fa-solid fa-cubes-stacked"></i><strong class="count-up" data-count="2" data-done="1">۲</strong><span>طراحی و تجربه کاربری</span><small>ساخت یک مسیر واضح</small></article>
-<article class="motion-stat" style="--mx: 99.8156967163086px; --my: 114.08782958984375px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
+<article class="motion-stat" style="--mx: 311.4200019836426px; --my: 162.4693603515625px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
 </div>
 <div class="motion-feature-grid">
 <article class="motion-glass-card winner-card" style="--mx: 132.19793701171875px; --my: 235.52970123291016px;"><div class="winner-aura"></div><div class="winner-medal"><i class="fa-solid fa-trophy"></i></div><span class="winner-label">DIBAG SPECIAL</span><h3>امضای اختصاصی DIBAG</h3><p>ظاهر هر پروژه باید شخصیت خودش را داشته باشد؛ از انتخاب رنگ و تایپوگرافی تا ریزترین تعامل‌ها.</p><div class="winner-ribbon">طراحی با هویت مستقل</div></article>
@@ -519,14 +521,6 @@ h3{font-weight:750;line-height:1.65}
 <article class="concept-card"><div class="concept-art concept-study"><div class="study-glow"></div><div class="study-title">DIBAG <b>STUDY</b></div><div class="study-ring"><strong>25:00</strong><small>FOCUS MODE</small></div><div class="study-bars"><i></i><i></i><i></i><i></i></div></div><div class="concept-info"><span>HTML / 03</span><h3>ابزار تمرینی HTML</h3><p>نمونه رابط تمرینی با زمان‌سنج و اجزای تعاملی مبتنی بر کد.</p></div></article>
 </div>
 </section>
-</section>
-<section class="page" id="pricing">
-<div class="section-title"><small>HTML CODING PLANS</small><h2>پلن‌های همکاری</h2><p>هزینه بر اساس حجم کد، میزان اصلاحات و جزئیات سفارش مشخص می‌شود.</p></div>
-<div class="grid price-grid">
-<article class="card" style="--mx: 188.02081298828125px; --my: 19.07293701171875px;"><h3>پایه</h3><p>برای اصلاح یا نوشتن یک بخش محدود HTML</p><div class="price">پانصد هزار تومان<small>/ هر پروژه</small></div><ul class="features"><li><i class="fa-solid fa-check"></i> کدنویسی ساختار HTML</li><li><i class="fa-solid fa-check"></i> مرتب‌سازی تگ‌ها</li><li><i class="fa-solid fa-check"></i> تحویل فایل کد</li></ul><button class="btn ghost plan-order" data-plan="پلن پایه">انتخاب پلن</button></article>
-<article class="card" style="border-color: rgb(137, 147, 165); --mx: 251.96875px; --my: 258.40626525878906px;"><h3>حرفه‌ای</h3><p>برای فرم‌ها و اجزای چندبخشی HTML</p><div class="price">یک میلیون<small>/ هر پروژه</small></div><ul class="features"><li><i class="fa-solid fa-check"></i> کدنویسی اختصاصی HTML</li><li><i class="fa-solid fa-check"></i> اجزای تعاملی توافق‌شده</li><li><i class="fa-solid fa-check"></i> بررسی و اصلاح کد</li></ul><button class="btn plan-order" data-plan="پلن حرفه‌ای">انتخاب پلن</button></article>
-<article class="card" style="--mx: 265.25px; --my: 217.7396240234375px;"><h3>اختصاصی</h3><p>برای سفارش‌های بزرگ و چندمرحله‌ای کدنویسی</p><div class="price">توافقی <small>/ هر پروژه</small></div><ul class="features"><li><i class="fa-solid fa-check"></i> ساختار سفارشی HTML</li><li><i class="fa-solid fa-check"></i> کدنویسی اجزای متعدد</li><li><i class="fa-solid fa-check"></i> تحویل مرحله‌ای فایل‌ها</li></ul><button class="btn ghost plan-order" data-plan="پلن اختصاصی">تماس بگیرید</button></article>
-</div>
 </section>
 <section class="page" id="order">
 <div class="section-title"><small>OFFICIAL GOOGLE FORM</small><h2>ثبت درخواست در DIBAG</h2><p>این فرم رسمی برای ثبت سفارش کدنویسی HTML است. پاسخ‌ها پس از ارسال در بخش Responses همین فرم ثبت می‌شوند.</p></div>
@@ -666,7 +660,10 @@ if(accountFormConfirm){
    localStorage.setItem('dibag_account_form_submitted','yes');
    const status=document.getElementById('accountGateStatus');
    if(status)status.textContent='وضعیت: تأیید شد؛ اکنون می‌توانی ثبت سفارش کنی.';
-   accountFormConfirm.innerHTML='<i class="fa-solid fa-check"></i> حساب کاربری تأیید شد';
+   accountFormConfirm.replaceChildren();
+   const confirmIcon=document.createElement('i');
+   confirmIcon.className='fa-solid fa-check';
+   accountFormConfirm.append(confirmIcon,document.createTextNode(' حساب کاربری تأیید شد'));
    toast('فرم تأیید شد؛ در حال انتقال به صفحه ایجاد سفارش…');
    setTimeout(()=>go('order'),450);
   }catch(err){toast('ذخیره وضعیت در مرورگر ممکن نشد.');}
@@ -674,7 +671,6 @@ if(accountFormConfirm){
 }
 
 
-document.querySelectorAll('.plan-order').forEach(b=>b.addEventListener('click',()=>go('order')));
 
 function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>el.classList.remove('show'),3200)}
 const read=(k,def)=>{
@@ -1429,7 +1425,7 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
 @media(max-width:480px){#dibagInstallGuide .guide-back{left:12px;bottom:12px;padding:11px 14px}#dibagInstallGuide .guide-card{border-radius:21px}}
 .critical-html-note{border:1px solid #ff405d!important;border-right:6px solid #ff284d!important;background:radial-gradient(circle at 0 50%,#ff375d20,transparent 45%),linear-gradient(115deg,#45111d,#210b16)!important;color:#ff8799!important;box-shadow:0 14px 34px #ff284d22,inset 0 1px 0 #ffffff14,0 0 0 1px #ff526822!important;font-weight:900!important}
 </style>
-<div aria-hidden="true" aria-labelledby="dibagGuideTitle" aria-modal="true" id="dibagInstallGuide" role="dialog" class="">
+<div aria-hidden="true" aria-labelledby="dibagGuideTitle" aria-modal="true" id="dibagInstallGuide" role="dialog">
 <div class="guide-card">
 <button aria-label="بستن راهنما" class="guide-close" type="button"><i class="fa-solid fa-xmark"></i></button>
 <div class="guide-top"><div class="guide-icon"><i class="fa-solid fa-download"></i></div><div><h2 id="dibagGuideTitle">راهنمای نصب اپلیکیشن</h2><div class="guide-sub">DIBAG · QUICK INSTALL GUIDE</div></div></div>
@@ -1477,7 +1473,14 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
   windows:{name:'ویندوز',icon:'<i class="fa-brands fa-windows"></i>',steps:[['۱','سایت را در مرورگر باز کن','در Chrome یا Microsoft Edge وارد سایت DIBAG شو.'],['۲','منوی مرورگر را باز کن','در Chrome منوی ⋮ و در Edge منوی Settings and more را باز کن.'],['۳','گزینه نصب را انتخاب کن','در Chrome گزینه «Install page as app» یا «Install app» را پیدا کن؛ در Edge از Apps و سپس Install this site as an app استفاده کن.'],['۴','Install را تأیید کن','نصب را تأیید کن تا DIBAG مثل یک برنامه جداگانه باز شود.']],tip:'در بعضی نسخه‌های Chrome یا Edge، آیکون نصب در نوار آدرس هم دیده می‌شود.'}
  };
  window.dibagOpenInstallGuide=()=>{modal?.classList.add('open');modal?.setAttribute('aria-hidden','false');chooser.hidden=false;stepsPanel.hidden=true;};
- modal?.querySelectorAll('.guide-os').forEach(btn=>btn.addEventListener('click',()=>{const g=guides[btn.dataset.os];if(!g)return;selected.innerHTML=g.icon+' <span>'+g.name+'</span>';stepsList.innerHTML=g.steps.map(x=>'<div class="guide-step"><b>'+x[0]+'</b><div><strong>'+x[1]+'</strong><p>'+x[2]+'</p></div></div>').join('');tip.innerHTML='<i class="fa-solid fa-circle-info"></i> '+g.tip;chooser.hidden=true;stepsPanel.hidden=false;}));
+ modal?.querySelectorAll('.guide-os').forEach(btn=>btn.addEventListener('click',()=>{const g=guides[btn.dataset.os];if(!g)return;
+  selected.replaceChildren();
+  const icon=document.createElement('i');
+  icon.className=btn.dataset.os==='ios'?'fa-brands fa-apple':btn.dataset.os==='android'?'fa-brands fa-android':'fa-brands fa-windows';
+  const name=document.createElement('span');name.textContent=g.name;selected.append(icon,name);
+  stepsList.replaceChildren();
+  g.steps.forEach(x=>{const step=document.createElement('div');step.className='guide-step';const number=document.createElement('b');number.textContent=x[0];const content=document.createElement('div');const heading=document.createElement('strong');heading.textContent=x[1];const paragraph=document.createElement('p');paragraph.textContent=x[2];content.append(heading,paragraph);step.append(number,content);stepsList.append(step);});
+  tip.replaceChildren();const info=document.createElement('i');info.className='fa-solid fa-circle-info';tip.append(info,document.createTextNode(' '+g.tip));chooser.hidden=true;stepsPanel.hidden=false;}));
  document.getElementById('dibagOSBack')?.addEventListener('click',()=>{stepsPanel.hidden=true;chooser.hidden=false;});
  const closeGuide=()=>{modal?.classList.remove('open');modal?.setAttribute('aria-hidden','true');};
  back?.addEventListener('click',()=>{closeGuide();if(typeof go==='function')go('home');else window.scrollTo({top:0,behavior:'smooth'});});
