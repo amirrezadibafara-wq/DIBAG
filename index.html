@@ -1,4 +1,4 @@
-<html dir="rtl" lang="fa" class=""><head>
+<html class="" dir="rtl" lang="fa"><head>
 <style id="dibag-no-old-version-flash">
 html.dibag-boot header,html.dibag-boot main,html.dibag-boot footer{visibility:hidden!important;opacity:0!important}
 html.dibag-boot #dibagBootSplash{visibility:visible!important;opacity:1!important}
@@ -12,6 +12,12 @@ html.dibag-boot #dibagBootSplash{visibility:visible!important;opacity:1!importan
 @keyframes dibagBootMove{to{transform:translateX(185%)}}
 html.dibag-boot #dibagBootSplash{visibility:visible;opacity:1}
 html:not(.dibag-boot) #dibagBootSplash{opacity:0;visibility:hidden;pointer-events:none}
+
+/* Font Awesome brand icons for OS selector */
+#dibagInstallGuide .guide-os-icon i.fa-brands{font-size:25px;line-height:1;display:inline-flex;align-items:center;justify-content:center}
+#dibagInstallGuide .guide-os-icon.ios i{font-size:27px}
+#dibagInstallGuide .guide-os-icon.android i{font-size:25px}
+#dibagInstallGuide .guide-os-icon.windows i{font-size:24px}
 </style>
 <script>document.documentElement.classList.add('dibag-boot');</script>
 <meta charset="utf-8">
@@ -343,7 +349,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 @media(max-width:850px){#home .dibag-hero::before{right:50%;transform:translate(50%,-50%);width:min(78vw,350px);opacity:.10}}
 @media(max-width:560px){#home .dibag-hero::before{width:min(82vw,310px);opacity:.09}}
 </style>
-
 <style id="dibag-smooth-mobile-menu">
 @media(max-width:850px){
  #navlinks{display:flex!important;visibility:hidden;opacity:0;pointer-events:none;max-height:0;overflow:hidden;transform:translateY(-16px) scale(.985);transform-origin:top center;padding-top:0!important;padding-bottom:0!important;transition:opacity .48s ease,transform .62s cubic-bezier(.2,.8,.2,1),max-height .68s cubic-bezier(.2,.8,.2,1),padding .4s ease,visibility .48s;will-change:opacity,transform,max-height}
@@ -362,7 +367,6 @@ button:focus-visible,a:focus-visible,input:focus-visible,textarea:focus-visible,
 @media(prefers-reduced-motion:reduce){#navlinks,#navlinks button,#menuBtn{transition:none!important;transform:none!important}}
 #dibagBootSplash strong{font-size:17px!important;letter-spacing:2px!important}
 </style>
-
 <style id="dibag-premium-typography">
 /* Refined Persian display typography + crisp Latin interface labels */
 :root{--font-display:"Estedad","Vazirmatn",sans-serif;--font-latin:"Space Grotesk","Vazirmatn",sans-serif}
@@ -374,17 +378,14 @@ h3{font-weight:750;line-height:1.65}
 .service-card h3,.card h3,.panel h3{letter-spacing:-.2px}
 @media(max-width:600px){h1{line-height:1.5}.section-title h2{line-height:1.6}}
 </style>
-
-
 <!-- DIBAG PWA: manifest and install metadata -->
-<link rel="manifest" href="./manifest.json">
-<meta name="mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-capable" content="yes">
-<meta name="apple-mobile-web-app-title" content="DIBAG">
-<link rel="apple-touch-icon" href="./icons/icon-192.png">
+<link href="./manifest.json" rel="manifest">
+<meta content="yes" name="mobile-web-app-capable">
+<meta content="yes" name="apple-mobile-web-app-capable">
+<meta content="DIBAG" name="apple-mobile-web-app-title">
+<link href="./icons/icon-192.png" rel="apple-touch-icon">
 </head>
 <body>
-
 <div aria-hidden="true" aria-live="polite" class="portfolio-loader" id="portfolioLoader" role="status">
 <div class="portfolio-loader-box">
 <div class="portfolio-loader-kicker"><i class="fa-solid fa-sparkles"></i> DIBAG SHOWCASE</div>
@@ -410,7 +411,7 @@ h3{font-weight:750;line-height:1.65}
 <button class="" data-page="account">حساب کاربری</button>
 </nav>
 <button class="nav-action" data-page="order">ثبت سفارش کد<i class="fa-solid fa-arrow-left"></i></button>
-<button aria-label="باز کردن منو" class="menu" id="menuBtn" aria-expanded="false"><i class="fa-solid fa-bars"></i></button>
+<button aria-expanded="false" aria-label="باز کردن منو" class="menu" id="menuBtn"><i class="fa-solid fa-bars"></i></button>
 </div>
 </header>
 <main>
@@ -449,7 +450,7 @@ h3{font-weight:750;line-height:1.65}
 <div class="motion-stats">
 <article class="motion-stat" style="--mx: 20.75335693359375px; --my: 124.4693603515625px;"><i class="fa-solid fa-bolt"></i><strong class="count-up" data-count="1" data-done="1">۱</strong><span>شناخت و ایده‌پردازی</span><small>شروع با نیاز واقعی پروژه</small></article>
 <article class="motion-stat" style="--mx: 21.75335693359375px; --my: 134.4693603515625px;"><i class="fa-solid fa-cubes-stacked"></i><strong class="count-up" data-count="2" data-done="1">۲</strong><span>طراحی و تجربه کاربری</span><small>ساخت یک مسیر واضح</small></article>
-<article class="motion-stat" style="--mx: 157.75787353515625px; --my: 14.091796875px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
+<article class="motion-stat" style="--mx: 99.8156967163086px; --my: 114.08782958984375px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
 </div>
 <div class="motion-feature-grid">
 <article class="motion-glass-card winner-card" style="--mx: 132.19793701171875px; --my: 235.52970123291016px;"><div class="winner-aura"></div><div class="winner-medal"><i class="fa-solid fa-trophy"></i></div><span class="winner-label">DIBAG SPECIAL</span><h3>امضای اختصاصی DIBAG</h3><p>ظاهر هر پروژه باید شخصیت خودش را داشته باشد؛ از انتخاب رنگ و تایپوگرافی تا ریزترین تعامل‌ها.</p><div class="winner-ribbon">طراحی با هویت مستقل</div></article>
@@ -461,7 +462,7 @@ h3{font-weight:750;line-height:1.65}
 <div class="grid">
 <article class="card" style="--mx: 2.0208740234375px; --my: 192.02084350585938px;"><div class="icon"><i class="fa-solid fa-display"></i></div><h3>طراحی واکنش‌گرا</h3><p>نمایش درست و مرتب در موبایل، تبلت و کامپیوتر.</p></article>
 <article class="card" style="--mx: 264.3021240234375px; --my: 52.02082824707031px;"><div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>ظاهر اختصاصی</h3><p>طراحی هماهنگ با هویت برند و نیاز هر پروژه.</p></article>
-<article class="card" style="--mx: 405px; --my: 144.5px;"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>فرآیند ثبت سفارش</h3><p>ثبت درخواست کدنویسی از طریق فرم رسمی Google Forms.</p></article>
+<article class="card" style="--mx: 347.66666412353516px; --my: 114.85418701171875px;"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>فرآیند ثبت سفارش</h3><p>ثبت درخواست کدنویسی از طریق فرم رسمی Google Forms.</p></article>
 </div>
 <section class="home-capabilities home-extra">
 <div class="section-title"><small>THE DIBAG DIFFERENCE</small><h2>فقط زیبا نیست؛ حساب‌شده ساخته می‌شود.</h2><p>کد حرفه‌ای باید خوانا، منظم، قابل نگهداری و مطابق نیاز دقیق پروژه باشد.</p></div>
@@ -539,7 +540,7 @@ h3{font-weight:750;line-height:1.65}
 <span class="google-form-live"><i></i> فرم رسمی Google Forms</span>
 </div>
 <div class="google-form-frame-wrap">
-<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" frameborder="0" height="1320" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" title="فرم ثبت درخواست DIBAG در Google Forms" width="100%" src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true">
+<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" frameborder="0" height="1320" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" title="فرم ثبت درخواست DIBAG در Google Forms" width="100%">
       درحال بارگذاری فرم…
     </iframe>
 </div>
@@ -561,7 +562,7 @@ h3{font-weight:750;line-height:1.65}
 <span class="google-form-live"><i></i> Google Forms</span>
 </div>
 <div class="google-form-frame-wrap">
-<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" frameborder="0" height="1030" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" title="فرم حساب کاربری DIBAG در Google Forms" width="100%" src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true">
+<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" frameborder="0" height="1030" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" title="فرم حساب کاربری DIBAG در Google Forms" width="100%">
       درحال بارگذاری فرم حساب کاربری…
     </iframe>
 </div>
@@ -1385,10 +1386,9 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
 @media(max-width:760px){#home .dibag-hero-art{width:100%;padding:0!important;margin:0 auto 8px;}#home .dibag-logo-frame{width:100%!important;min-height:270px!important;border-radius:22px!important;padding:13px 14px 12px!important;}#home .dibag-logo-frame-inner{min-height:175px!important;padding:8px 0!important;}#home .dibag-logo-frame-inner img{width:min(92%,330px)!important;max-height:205px!important;}#home .dibag-logo-frame-top,#home .dibag-logo-frame-bottom{font-size:8px;}}
 @media(max-width:420px){#home .dibag-logo-frame{min-height:245px!important;}#home .dibag-logo-frame-inner{min-height:155px!important;}#home .dibag-logo-frame-inner img{width:min(96%,300px)!important;}}
 </style>
-
 <!-- DIBAG PWA install control -->
-<button id="dibagInstallApp" type="button" aria-label="نصب اپلیکیشن DIBAG">
-  <span aria-hidden="true">⬇</span><span>نصب اپلیکیشن DIBAG</span>
+<button aria-label="نصب اپلیکیشن DIBAG" id="dibagInstallApp" type="button">
+<span aria-hidden="true">⬇</span><span>نصب اپلیکیشن DIBAG</span>
 </button>
 <style id="dibag-pwa-install-style">
 #dibagInstallApp{position:fixed;z-index:99990;left:18px;bottom:18px;display:flex;align-items:center;gap:9px;padding:12px 17px;border:1px solid #78c8ff70;border-radius:16px;background:linear-gradient(135deg,#b5f3ff,#79a8ff 55%,#b6a4ff);color:#071325;font:800 13px/1.4 inherit;box-shadow:0 10px 34px #3c8fff38,0 2px 8px #0003;cursor:pointer;transition:transform .2s,box-shadow .2s}
@@ -1402,11 +1402,86 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
  const btn=document.getElementById('dibagInstallApp');
  if(btn){btn.addEventListener('click',async()=>{
    if(installEvent){installEvent.prompt();const choice=await installEvent.userChoice;installEvent=null;if(choice?.outcome==='accepted')btn.style.display='none';}
-   else{alert('برای نصب در مرورگرهای سازگار، از منوی مرورگر گزینه Install app یا Add to Home Screen را انتخاب کنید.');}
+   else{if(window.dibagOpenInstallGuide)window.dibagOpenInstallGuide();else alert('برای نصب، از منوی مرورگر گزینه Install app یا Add to Home Screen را انتخاب کنید.');}
  });}
  window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;if(btn)btn.style.display='flex';});
  window.addEventListener('appinstalled',()=>{if(btn)btn.style.display='none';installEvent=null;});
  if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(err=>console.warn('DIBAG service worker:',err)));}
+})();
+</script>
+<!-- DIBAG Install Guide: lightweight custom modal, all original content retained -->
+<style id="dibag-install-guide-style">
+#dibagInstallGuide{position:fixed;inset:0;z-index:100020;display:grid;place-items:center;padding:18px;background:rgba(3,7,18,.78);backdrop-filter:blur(16px);opacity:0;visibility:hidden;pointer-events:none;transition:opacity .22s,visibility .22s}
+#dibagInstallGuide.open{opacity:1;visibility:visible;pointer-events:auto}
+#dibagInstallGuide .guide-card{width:min(540px,94vw);max-height:88vh;overflow:auto;position:relative;padding:clamp(20px,4vw,30px);border:1px solid #83caff55;border-radius:25px;background:radial-gradient(circle at 90% 0,#448dff28,transparent 40%),linear-gradient(145deg,#152644,#091326);box-shadow:0 25px 90px #0009,0 0 45px #478dff20;color:#eef6ff}
+#dibagInstallGuide .guide-top{display:flex;align-items:center;gap:12px;margin-bottom:18px}
+#dibagInstallGuide .guide-icon{width:46px;height:46px;display:grid;place-items:center;border-radius:15px;background:linear-gradient(145deg,#b8f3ff,#7198ff 60%,#a48aff);color:#07152d;font-size:18px;box-shadow:0 8px 24px #4c91ff40}
+#dibagInstallGuide h2{font-size:18px;font-weight:900}#dibagInstallGuide .guide-sub{font-size:9px;color:#91b5e0;letter-spacing:1.8px;margin-top:4px}
+#dibagInstallGuide .guide-close{position:absolute;left:15px;top:15px;width:34px;height:34px;border:1px solid #80baff44;border-radius:10px;background:#ffffff08;color:#c9e3ff;cursor:pointer}
+#dibagInstallGuide .guide-steps{display:grid;gap:10px;margin:17px 0}
+#dibagInstallGuide .guide-step{display:flex;gap:12px;padding:14px;border:1px solid #7eb8ff24;border-radius:15px;background:#ffffff06}
+#dibagInstallGuide .guide-step b{flex:0 0 28px;width:28px;height:28px;display:grid;place-items:center;border-radius:9px;background:linear-gradient(145deg,#a9f0ff,#7995ff);color:#08152d;font-size:11px}
+#dibagInstallGuide .guide-step strong{display:block;font-size:11px;margin-bottom:5px;color:#eaf5ff}#dibagInstallGuide .guide-step p{font-size:10px;line-height:2;color:#a8bbd9}
+#dibagInstallGuide .guide-tip{padding:12px 14px;border:1px solid #6faaff30;border-radius:13px;background:#6eaaff0b;color:#a9c4e8;font-size:10px;line-height:2}
+#dibagInstallGuide .guide-back{position:fixed;left:18px;bottom:18px;z-index:100021;display:flex;align-items:center;gap:8px;padding:12px 17px;border:1px solid #ff9ba9aa;border-radius:15px;background:linear-gradient(135deg,#ffb5c4,#ff637e);color:#240a13;font-weight:900;font-size:12px;box-shadow:0 12px 32px #ff426b30;cursor:pointer;opacity:0;visibility:hidden;transform:translateY(12px);transition:.22s}
+#dibagInstallGuide.open .guide-back{opacity:1;visibility:visible;transform:none}
+#dibagInstallGuide .guide-back:hover{transform:translateY(-2px)}
+@media(max-width:480px){#dibagInstallGuide .guide-back{left:12px;bottom:12px;padding:11px 14px}#dibagInstallGuide .guide-card{border-radius:21px}}
+.critical-html-note{border:1px solid #ff405d!important;border-right:6px solid #ff284d!important;background:radial-gradient(circle at 0 50%,#ff375d20,transparent 45%),linear-gradient(115deg,#45111d,#210b16)!important;color:#ff8799!important;box-shadow:0 14px 34px #ff284d22,inset 0 1px 0 #ffffff14,0 0 0 1px #ff526822!important;font-weight:900!important}
+</style>
+<div aria-hidden="true" aria-labelledby="dibagGuideTitle" aria-modal="true" id="dibagInstallGuide" role="dialog" class="">
+<div class="guide-card">
+<button aria-label="بستن راهنما" class="guide-close" type="button"><i class="fa-solid fa-xmark"></i></button>
+<div class="guide-top"><div class="guide-icon"><i class="fa-solid fa-download"></i></div><div><h2 id="dibagGuideTitle">راهنمای نصب اپلیکیشن</h2><div class="guide-sub">DIBAG · QUICK INSTALL GUIDE</div></div></div>
+<section class="guide-view" id="dibagOSChooser">
+<p class="guide-prompt">دستگاهت از کدام سیستم‌عامل استفاده می‌کند؟</p>
+<div class="guide-os-grid">
+<button class="guide-os" data-os="ios" type="button"><span class="guide-os-icon ios"><i aria-hidden="true" class="fa-brands fa-apple"></i></span><strong>آیفون</strong><small>iOS · Safari</small></button>
+<button class="guide-os" data-os="android" type="button"><span class="guide-os-icon android"><i aria-hidden="true" class="fa-brands fa-android"></i></span><strong>اندروید</strong><small>Android · Chrome</small></button>
+<button class="guide-os" data-os="windows" type="button"><span class="guide-os-icon windows"><i aria-hidden="true" class="fa-brands fa-windows"></i></span><strong>ویندوز</strong><small>Windows · PC</small></button>
+</div>
+<div class="guide-tip"><i class="fa-solid fa-shield-halved"></i> راهنمای مخصوص دستگاهت نمایش داده می‌شود.</div>
+</section>
+<section class="guide-view" hidden="" id="dibagOSSteps">
+<div class="guide-selected" id="dibagSelectedOS"></div>
+<button class="guide-os-back" id="dibagOSBack" type="button"><i class="fa-solid fa-arrow-right"></i> انتخاب سیستم‌عامل دیگر</button>
+<div class="guide-steps" id="dibagStepsList"></div>
+<div class="guide-tip" id="dibagOSTip"></div>
+</section>
+</div>
+<button class="guide-back" id="dibagGuideBack" type="button"><i class="fa-solid fa-arrow-right"></i> بازگشت به صفحه اصلی</button>
+</div>
+<style id="dibag-os-picker-style">
+#dibagInstallGuide .guide-prompt{font-size:12px;color:#d8e9ff;margin:10px 0 16px;font-weight:800}
+#dibagInstallGuide .guide-os-grid{display:grid;grid-template-columns:repeat(3,minmax(0,1fr));gap:10px}
+#dibagInstallGuide .guide-os{border:1px solid #8bbdff2e;border-radius:17px;padding:15px 8px 13px;background:linear-gradient(145deg,#ffffff0b,#ffffff03);color:#e9f4ff;display:flex;align-items:center;flex-direction:column;gap:8px;cursor:pointer;transition:.2s;min-width:0}
+#dibagInstallGuide .guide-os:hover{transform:translateY(-3px);border-color:#91caff88;background:#6baaff15;box-shadow:0 10px 28px #468aff20}
+#dibagInstallGuide .guide-os-icon{width:48px;height:48px;display:grid;place-items:center;border-radius:15px;box-shadow:inset 0 1px 0 #ffffff40,0 8px 24px #0002}
+#dibagInstallGuide .guide-os-icon svg{width:31px;height:31px}
+#dibagInstallGuide .guide-os-icon.ios{background:linear-gradient(140deg,#f7fbff,#9eb9d8);color:#14233a}
+#dibagInstallGuide .guide-os-icon.android{background:linear-gradient(140deg,#a4f5c3,#42bd83);color:#073a26}
+#dibagInstallGuide .guide-os-icon.windows{background:linear-gradient(140deg,#9fe6ff,#349bff);color:#063064}
+#dibagInstallGuide .guide-os strong{font-size:12px}#dibagInstallGuide .guide-os small{font-size:9px;color:#94b7dd}
+#dibagInstallGuide .guide-selected{display:flex;align-items:center;gap:10px;font-weight:900;color:#eaf5ff;margin:8px 0 12px}
+#dibagInstallGuide .guide-os-back{border:1px solid #80baff35;background:#ffffff08;color:#b9d7fa;padding:9px 12px;border-radius:11px;font-size:10px;cursor:pointer}
+#dibagInstallGuide .guide-view[hidden]{display:none!important}
+@media(max-width:390px){#dibagInstallGuide .guide-os-grid{gap:7px}#dibagInstallGuide .guide-os{padding:12px 5px}#dibagInstallGuide .guide-os-icon{width:42px;height:42px}}
+</style>
+<script id="dibag-install-guide-script">
+(()=>{
+ const modal=document.getElementById('dibagInstallGuide'),back=document.getElementById('dibagGuideBack'),close=modal?.querySelector('.guide-close');
+ const chooser=document.getElementById('dibagOSChooser'),stepsPanel=document.getElementById('dibagOSSteps'),stepsList=document.getElementById('dibagStepsList'),selected=document.getElementById('dibagSelectedOS'),tip=document.getElementById('dibagOSTip');
+ const guides={
+  ios:{name:'آیفون و iOS',icon:'<i class="fa-brands fa-apple"></i>',steps:[['۱','Safari را باز کن','این سایت را با مرورگر Safari باز کن.'],['۲','دکمه اشتراک‌گذاری را بزن','در نوار پایین Safari، آیکون Share (مربع و فلش رو به بالا) را انتخاب کن.'],['۳','Add to Home Screen','در فهرست گزینه‌ها «Add to Home Screen / افزودن به صفحه اصلی» را پیدا کن و بزن.'],['۴','افزودن را تأیید کن','در بالای صفحه Add را بزن تا آیکون DIBAG به صفحه اصلی اضافه شود.']],tip:'در آیفون، نصب از Safari انجام می‌شود. اگر گزینه Add to Home Screen را ندیدی، منوی اشتراک‌گذاری را کمی پایین‌تر بررسی کن.'},
+  android:{name:'اندروید',icon:'<i class="fa-brands fa-android"></i>',steps:[['۱','Chrome را باز کن','سایت DIBAG را در Google Chrome باز کن.'],['۲','منوی سه‌نقطه را بزن','از بالای Chrome منوی ⋮ را باز کن.'],['۳','Install app یا Add to Home Screen','گزینه «Install app / نصب برنامه» یا «Add to Home Screen» را انتخاب کن.'],['۴','نصب را تأیید کن','دکمه Install یا افزودن را بزن؛ آیکون DIBAG در دستگاهت قرار می‌گیرد.']],tip:'اگر گزینه نصب نمایش داده نشد، از منوی Chrome گزینه Add to Home Screen را امتحان کن.'},
+  windows:{name:'ویندوز',icon:'<i class="fa-brands fa-windows"></i>',steps:[['۱','سایت را در مرورگر باز کن','در Chrome یا Microsoft Edge وارد سایت DIBAG شو.'],['۲','منوی مرورگر را باز کن','در Chrome منوی ⋮ و در Edge منوی Settings and more را باز کن.'],['۳','گزینه نصب را انتخاب کن','در Chrome گزینه «Install page as app» یا «Install app» را پیدا کن؛ در Edge از Apps و سپس Install this site as an app استفاده کن.'],['۴','Install را تأیید کن','نصب را تأیید کن تا DIBAG مثل یک برنامه جداگانه باز شود.']],tip:'در بعضی نسخه‌های Chrome یا Edge، آیکون نصب در نوار آدرس هم دیده می‌شود.'}
+ };
+ window.dibagOpenInstallGuide=()=>{modal?.classList.add('open');modal?.setAttribute('aria-hidden','false');chooser.hidden=false;stepsPanel.hidden=true;};
+ modal?.querySelectorAll('.guide-os').forEach(btn=>btn.addEventListener('click',()=>{const g=guides[btn.dataset.os];if(!g)return;selected.innerHTML=g.icon+' <span>'+g.name+'</span>';stepsList.innerHTML=g.steps.map(x=>'<div class="guide-step"><b>'+x[0]+'</b><div><strong>'+x[1]+'</strong><p>'+x[2]+'</p></div></div>').join('');tip.innerHTML='<i class="fa-solid fa-circle-info"></i> '+g.tip;chooser.hidden=true;stepsPanel.hidden=false;}));
+ document.getElementById('dibagOSBack')?.addEventListener('click',()=>{stepsPanel.hidden=true;chooser.hidden=false;});
+ const closeGuide=()=>{modal?.classList.remove('open');modal?.setAttribute('aria-hidden','true');};
+ back?.addEventListener('click',()=>{closeGuide();if(typeof go==='function')go('home');else window.scrollTo({top:0,behavior:'smooth'});});
+ close?.addEventListener('click',closeGuide);modal?.addEventListener('click',e=>{if(e.target===modal)closeGuide();});document.addEventListener('keydown',e=>{if(e.key==='Escape'&&modal?.classList.contains('open'))closeGuide();});
 })();
 </script>
 <!-- Made by DIBAG -->
