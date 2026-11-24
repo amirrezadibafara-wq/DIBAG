@@ -1,12 +1,26 @@
-"icons": [
-  {
-    "src": "DIBAG_icon_192_background.png",
-    "sizes": "192x192",
-    "type": "image/png"
-  },
-  {
-    "src": "DIBAG_icon_512_background.png",
-    "sizes": "512x512",
-    "type": "image/png"
-  }
-]
+
+{
+  "name": "DIBAG",
+  "short_name": "DIBAG",
+  "description": "DIBAG Digital Studio",
+  "start_url": "./",
+  "scope": "./",
+  "display": "standalone",
+  "orientation": "any",
+  "background_color": "#080b16",
+  "theme_color": "#080b16",
+  "icons": [
+    {
+      "src": "./icons/icon-192.png",
+      "sizes": "192x192",
+      "type": "image/png",
+      "purpose": "any"
+    },
+    {
+      "src": "./icons/icon-512.png",
+      "sizes": "512x512",
+      "type": "image/png",
+      "purpose": "any"
+    }
+  ]
+}
