@@ -375,6 +375,13 @@ h3{font-weight:750;line-height:1.65}
 @media(max-width:600px){h1{line-height:1.5}.section-title h2{line-height:1.6}}
 </style>
 
+
+<!-- DIBAG PWA: manifest and install metadata -->
+<link rel="manifest" href="./manifest.json">
+<meta name="mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-capable" content="yes">
+<meta name="apple-mobile-web-app-title" content="DIBAG">
+<link rel="apple-touch-icon" href="./icons/icon-192.png">
 </head>
 <body>
 
@@ -442,7 +449,7 @@ h3{font-weight:750;line-height:1.65}
 <div class="motion-stats">
 <article class="motion-stat" style="--mx: 20.75335693359375px; --my: 124.4693603515625px;"><i class="fa-solid fa-bolt"></i><strong class="count-up" data-count="1" data-done="1">۱</strong><span>شناخت و ایده‌پردازی</span><small>شروع با نیاز واقعی پروژه</small></article>
 <article class="motion-stat" style="--mx: 21.75335693359375px; --my: 134.4693603515625px;"><i class="fa-solid fa-cubes-stacked"></i><strong class="count-up" data-count="2" data-done="1">۲</strong><span>طراحی و تجربه کاربری</span><small>ساخت یک مسیر واضح</small></article>
-<article class="motion-stat" style="--mx: 311.4200019836426px; --my: 162.4693603515625px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
+<article class="motion-stat" style="--mx: 157.75787353515625px; --my: 14.091796875px;"><i class="fa-solid fa-wand-magic-sparkles"></i><strong class="count-up" data-count="3" data-done="1">۳</strong><span>اجرا و بهینه‌سازی</span><small>توجه به جزئیات نهایی</small></article>
 </div>
 <div class="motion-feature-grid">
 <article class="motion-glass-card winner-card" style="--mx: 132.19793701171875px; --my: 235.52970123291016px;"><div class="winner-aura"></div><div class="winner-medal"><i class="fa-solid fa-trophy"></i></div><span class="winner-label">DIBAG SPECIAL</span><h3>امضای اختصاصی DIBAG</h3><p>ظاهر هر پروژه باید شخصیت خودش را داشته باشد؛ از انتخاب رنگ و تایپوگرافی تا ریزترین تعامل‌ها.</p><div class="winner-ribbon">طراحی با هویت مستقل</div></article>
@@ -454,7 +461,7 @@ h3{font-weight:750;line-height:1.65}
 <div class="grid">
 <article class="card" style="--mx: 2.0208740234375px; --my: 192.02084350585938px;"><div class="icon"><i class="fa-solid fa-display"></i></div><h3>طراحی واکنش‌گرا</h3><p>نمایش درست و مرتب در موبایل، تبلت و کامپیوتر.</p></article>
 <article class="card" style="--mx: 264.3021240234375px; --my: 52.02082824707031px;"><div class="icon"><i class="fa-solid fa-wand-magic-sparkles"></i></div><h3>ظاهر اختصاصی</h3><p>طراحی هماهنگ با هویت برند و نیاز هر پروژه.</p></article>
-<article class="card" style="--mx: 347.66666412353516px; --my: 114.85418701171875px;"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>فرآیند ثبت سفارش</h3><p>ثبت درخواست کدنویسی از طریق فرم رسمی Google Forms.</p></article>
+<article class="card" style="--mx: 405px; --my: 144.5px;"><div class="icon"><i class="fa-solid fa-shield-halved"></i></div><h3>فرآیند ثبت سفارش</h3><p>ثبت درخواست کدنویسی از طریق فرم رسمی Google Forms.</p></article>
 </div>
 <section class="home-capabilities home-extra">
 <div class="section-title"><small>THE DIBAG DIFFERENCE</small><h2>فقط زیبا نیست؛ حساب‌شده ساخته می‌شود.</h2><p>کد حرفه‌ای باید خوانا، منظم، قابل نگهداری و مطابق نیاز دقیق پروژه باشد.</p></div>
@@ -1378,4 +1385,29 @@ footer strong{color:#d8efff;letter-spacing:1.2px;text-shadow:0 0 18px #6bbaff3d}
 @media(max-width:760px){#home .dibag-hero-art{width:100%;padding:0!important;margin:0 auto 8px;}#home .dibag-logo-frame{width:100%!important;min-height:270px!important;border-radius:22px!important;padding:13px 14px 12px!important;}#home .dibag-logo-frame-inner{min-height:175px!important;padding:8px 0!important;}#home .dibag-logo-frame-inner img{width:min(92%,330px)!important;max-height:205px!important;}#home .dibag-logo-frame-top,#home .dibag-logo-frame-bottom{font-size:8px;}}
 @media(max-width:420px){#home .dibag-logo-frame{min-height:245px!important;}#home .dibag-logo-frame-inner{min-height:155px!important;}#home .dibag-logo-frame-inner img{width:min(96%,300px)!important;}}
 </style>
+
+<!-- DIBAG PWA install control -->
+<button id="dibagInstallApp" type="button" aria-label="نصب اپلیکیشن DIBAG">
+  <span aria-hidden="true">⬇</span><span>نصب اپلیکیشن DIBAG</span>
+</button>
+<style id="dibag-pwa-install-style">
+#dibagInstallApp{position:fixed;z-index:99990;left:18px;bottom:18px;display:flex;align-items:center;gap:9px;padding:12px 17px;border:1px solid #78c8ff70;border-radius:16px;background:linear-gradient(135deg,#b5f3ff,#79a8ff 55%,#b6a4ff);color:#071325;font:800 13px/1.4 inherit;box-shadow:0 10px 34px #3c8fff38,0 2px 8px #0003;cursor:pointer;transition:transform .2s,box-shadow .2s}
+#dibagInstallApp:hover{transform:translateY(-2px);box-shadow:0 14px 38px #3c8fff52}
+#dibagInstallApp:active{transform:scale(.97)}
+@media(max-width:480px){#dibagInstallApp{left:12px;bottom:12px;padding:11px 13px;font-size:12px}}
+</style>
+<script id="dibag-pwa-setup">
+(()=>{
+ let installEvent=null;
+ const btn=document.getElementById('dibagInstallApp');
+ if(btn){btn.addEventListener('click',async()=>{
+   if(installEvent){installEvent.prompt();const choice=await installEvent.userChoice;installEvent=null;if(choice?.outcome==='accepted')btn.style.display='none';}
+   else{alert('برای نصب در مرورگرهای سازگار، از منوی مرورگر گزینه Install app یا Add to Home Screen را انتخاب کنید.');}
+ });}
+ window.addEventListener('beforeinstallprompt',e=>{e.preventDefault();installEvent=e;if(btn)btn.style.display='flex';});
+ window.addEventListener('appinstalled',()=>{if(btn)btn.style.display='none';installEvent=null;});
+ if('serviceWorker' in navigator){window.addEventListener('load',()=>navigator.serviceWorker.register('./sw.js',{scope:'./'}).catch(err=>console.warn('DIBAG service worker:',err)));}
+})();
+</script>
+<!-- Made by DIBAG -->
 </body></html>
