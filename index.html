@@ -573,51 +573,40 @@ h3{font-weight:750;line-height:1.65}
 </section>
 </section>
 <section class="page" id="order">
-<div class="section-title"><small>OFFICIAL GOOGLE FORM</small><h2>ثبت درخواست در DIBAG</h2><p>این فرم رسمی برای ثبت سفارش کدنویسی HTML است. پاسخ‌ها پس از ارسال در بخش Responses همین فرم ثبت می‌شوند.</p></div>
-<div class="panel google-form-panel">
-<div class="google-form-intro">
-<div class="google-form-mark"><i class="fa-brands fa-google"></i></div>
-<div class="google-form-intro-copy">
-<strong>فرم رسمی سفارش کدنویسی HTML</strong>
-<span>شرح دقیق کد HTML موردنیازت را در فرم وارد کن و در پایان دکمه «ارسال» گوگل را بزن.</span>
-</div>
-<span class="google-form-live"><i></i> فرم رسمی Google Forms</span>
-</div>
-<div class="google-form-frame-wrap">
-<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" frameborder="0" height="1320" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform?embedded=true" title="فرم ثبت درخواست DIBAG در Google Forms" width="100%">
-      درحال بارگذاری فرم…
-    </iframe>
-</div>
-<div class="google-form-footer">
-<span><i class="fa-solid fa-circle-info"></i> پس از زدن دکمه «ارسال» در خود فرم، پاسخ مستقیماً در Google Forms و زبانه Responses همین فرم ثبت می‌شود.</span>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/viewform" rel="noopener noreferrer" target="_blank">باز کردن فرم در صفحه جداگانه <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-</div>
-</div>
+<div class="section-title"><small>REQUEST CENTER</small><h2>ثبت درخواست در DIBAG</h2><p>فرم اختصاصی ثبت سفارش کدنویسی HTML</p></div>
+<section class="dibag-native-form-card" id="dibagOrderCard">
+  <div class="dibag-native-form-head"><div class="dibag-native-form-icon"><i class="fa-solid fa-code"></i></div><div><span class="dibag-native-eyebrow">HTML REQUEST</span><h3>جزئیات سفارش</h3><p>نیازت را دقیق توضیح بده تا درخواست کامل ثبت شود.</p></div></div>
+  <div class="dibag-native-progress"><span class="active"></span><span class="active"></span><small>مرحله ۲ از ۲</small></div>
+  <form class="dibag-native-form" id="dibagOrderNativeForm" action="https://docs.google.com/forms/d/e/1FAIpQLSewD7WHieaTX711HFPa76X_yBDd35yGtkfpHlLvg_BQSFD3tA/formResponse" method="POST" target="dibagOrderSubmitFrame">
+    <div class="dibag-native-grid"><label class="dibag-native-field"><span>نام و نام خانوادگی</span><input name="entry.1449553951" autocomplete="name" maxlength="90" placeholder="نام کامل شما" required=""></label>
+    <label class="dibag-native-field"><span>شماره تماس</span><input name="entry.976998796" autocomplete="tel" inputmode="tel" placeholder="شماره تماس" required=""></label>
+    <label class="dibag-native-field dibag-native-wide"><span>شرح سفارش HTML</span><textarea name="entry.1763405155" rows="5" maxlength="4000" placeholder="توضیح بده چه کدی می‌خواهی، چه امکاناتی لازم است و چه ظاهر مدنظرت است..." required=""></textarea></label>
+    <label class="dibag-native-field"><span>شهر</span><input name="entry.1894476463" autocomplete="address-level2" placeholder="نام شهر" required=""></label>
+    <label class="dibag-native-field"><span>گزینه مربوطه</span><select name="entry.1383906254" required=""><option value="" disabled="" selected="">انتخاب کنید</option><option value="دارم">دارم</option><option value="ندارم">ندارم</option></select></label></div>
+    <button class="dibag-native-submit" type="submit"><span>ثبت درخواست</span><i class="fa-solid fa-paper-plane"></i></button>
+    <p class="dibag-native-privacy"><i class="fa-solid fa-shield-halved"></i> درخواست برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagOrderResult" aria-live="polite">ارسال درخواست انجام شد. (برای تأیید ثبت قطعی، پاسخ‌های Google Forms بررسی شود.)</p>
+  </form><iframe name="dibagOrderSubmitFrame" id="dibagOrderSubmitFrame" title="ارسال سفارش به سامانه" class="dibag-submit-frame" aria-hidden="true"></iframe>
+</section>
+<div class="notice warn" style="margin-top:14px">بعد از ارسال، این صفحه نمی‌تواند پاسخ نهایی Google Forms را بخواند. پیام ارسال نمایش داده می‌شود؛ برای تأیید ثبت قطعی، Responses فرم باید بررسی شود.</div>
 </section>
 <section class="page" id="account">
 <div class="section-title"><small>MEMBER AREA</small><h2>حساب کاربری</h2><p>ابتدا فرم حساب کاربری را تکمیل و ارسال کن؛ سپس امکان ورود به بخش ثبت سفارش برایت فعال می‌شود.</p></div>
-<div class="panel google-form-panel" style="margin-bottom:20px">
-<div class="google-form-intro">
-<div class="google-form-mark"><i class="fa-brands fa-google"></i></div>
-<div class="google-form-intro-copy">
-<strong>فرم رسمی ایجاد حساب کاربری DIBAG</strong>
-<span>اطلاعات حساب را در فرم زیر وارد کن و در پایان دکمه ارسال گوگل را بزن.</span>
-</div>
-<span class="google-form-live"><i></i> Google Forms</span>
-</div>
-<div class="google-form-frame-wrap">
-<iframe class="google-form-frame" data-src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" frameborder="0" height="1030" loading="lazy" marginheight="0" marginwidth="0" referrerpolicy="strict-origin-when-cross-origin" src="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform?embedded=true" title="فرم حساب کاربری DIBAG در Google Forms" width="100%">
-      درحال بارگذاری فرم حساب کاربری…
-    </iframe>
-</div>
-<div class="google-form-footer">
-<span><i class="fa-solid fa-circle-info"></i> پس از ارسال فرم، پاسخ در حساب مالک این Google Form و بخش Responses ثبت می‌شود.</span>
-<a href="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/viewform" rel="noopener noreferrer" target="_blank">باز کردن فرم جداگانه <i class="fa-solid fa-arrow-up-right-from-square"></i></a>
-</div>
-<div class="notice warn" style="margin-top:16px">پس از ارسال فرم گوگل، روی دکمه زیر بزن تا در همین مرورگر بخش ثبت سفارش برایت باز شود.</div>
-<button class="btn" id="confirmAccountForm" type="button"><i class="fa-solid fa-check"></i> حساب کاربری تأیید شد</button>
-<p aria-live="polite" class="hint" id="accountGateStatus">وضعیت: تأیید شد؛ اکنون می‌توانی ثبت سفارش کنی.</p>
-</div>
+<section class="dibag-native-form-card" id="dibagAccountCard">
+  <div class="dibag-native-form-head"><div class="dibag-native-form-icon"><i class="fa-solid fa-user-plus"></i></div><div><span class="dibag-native-eyebrow">DIBAG ACCOUNT</span><h3>ثبت اطلاعات حساب</h3><p>اطلاعاتت را وارد کن تا مرحله سفارش برایت فعال شود.</p></div></div>
+  <div class="dibag-native-progress"><span class="active"></span><span></span><small>مرحله ۱ از ۲</small></div>
+  <form class="dibag-native-form" id="dibagAccountNativeForm" action="https://docs.google.com/forms/d/e/1FAIpQLScHMM7OHR_P93D603zHH6Doy8AUyb4rIHkPRXXHCN1ZxLexIQ/formResponse" method="POST" target="dibagAccountSubmitFrame">
+    <div class="dibag-native-grid"><label class="dibag-native-field"><span>نام و نام خانوادگی</span><input name="entry.1834264585" autocomplete="name" maxlength="90" placeholder="نام کامل شما" required=""></label>
+    <label class="dibag-native-field"><span>شماره تماس</span><input name="entry.1390779945" autocomplete="tel" inputmode="tel" placeholder="شماره تماس" required=""></label>
+    <label class="dibag-native-field"><span>شهر</span><input name="entry.1025666400" autocomplete="address-level2" placeholder="نام شهر" required=""></label>
+    <label class="dibag-native-field"><span>پاسخ گزینه‌ای</span><select name="entry.1783685393" required=""><option value="" disabled="" selected="">انتخاب کنید</option><option value="بله">بله</option><option value="خیر">خیر</option></select></label></div>
+    <button class="dibag-native-submit" type="submit"><span>ثبت اطلاعات</span><i class="fa-solid fa-arrow-left"></i></button>
+    <p class="dibag-native-privacy"><i class="fa-solid fa-lock"></i> اطلاعات برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagAccountResult" aria-live="polite">ارسال انجام شد. (ثبت نهایی را نمی‌توان از این صفحه تأیید کرد.)</p>
+  </form>
+  <iframe name="dibagAccountSubmitFrame" id="dibagAccountSubmitFrame" title="ارسال حساب به سامانه" class="dibag-submit-frame" aria-hidden="true"></iframe>
+</section>
+<div class="notice warn" style="margin-top:14px">برای رفتن به مرحله سفارش، فرم بالا را ارسال کن. مرورگر نمی‌تواند پاسخ نهایی گوگل را از این صفحه بخواند؛ بنابراین پیام پس از ارسال، رسیدن درخواست را نشان می‌دهد و تأیید نهایی باید در Responses بررسی شود.</div>
+<button class="btn" id="confirmAccountForm" type="button"><i class="fa-solid fa-arrow-left"></i> ادامه به ثبت سفارش</button>
+<p aria-live="polite" class="hint" id="accountGateStatus">وضعیت: فرم ارسال شد؛ می‌توانی ادامه بدهی.</p>
 <div class="split hidden">
 <div class="panel">
 <div class="hidden" id="loggedBox">
@@ -661,10 +650,7 @@ h3{font-weight:750;line-height:1.65}
 const pages=[...document.querySelectorAll('.page')];
 const navButtons=[...document.querySelectorAll('[data-page]')];
 let currentPage='home';
-function loadGoogleForm(page){
- const frame=document.querySelector('#'+page+' iframe.google-form-frame');
- if(frame && !frame.src && frame.dataset.src){ frame.src=frame.dataset.src; }
-}
+function loadGoogleForm(page){ /* Native DIBAG forms are rendered locally; submission targets Google Forms in hidden frames. */ }
 function go(page, skipPortfolioLoader=false){
  if(!document.getElementById(page))return;
  if(page==='portfolio' && currentPage!=='portfolio' && !skipPortfolioLoader){
@@ -704,21 +690,16 @@ menuBtn.addEventListener('click',()=>{
 });
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileNav.classList.contains('open')){mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}});
 const accountFormConfirm=document.getElementById('confirmAccountForm');
-if(accountFormConfirm){
- accountFormConfirm.addEventListener('click',()=>{
-  try{
-   localStorage.setItem('dibag_account_form_submitted','yes');
-   const status=document.getElementById('accountGateStatus');
-   if(status)status.textContent='وضعیت: تأیید شد؛ اکنون می‌توانی ثبت سفارش کنی.';
-   accountFormConfirm.replaceChildren();
-   const confirmIcon=document.createElement('i');
-   confirmIcon.className='fa-solid fa-check';
-   accountFormConfirm.append(confirmIcon,document.createTextNode(' حساب کاربری تأیید شد'));
-   toast('فرم تأیید شد؛ در حال انتقال به صفحه ایجاد سفارش…');
-   setTimeout(()=>go('order'),450);
-  }catch(err){toast('ذخیره وضعیت در مرورگر ممکن نشد.');}
- });
-}
+if(accountFormConfirm){accountFormConfirm.addEventListener('click',()=>go('order'));}
+// Custom DIBAG forms post directly to Google Forms response endpoints in hidden iframes.
+(()=>{
+ const acct=document.getElementById('dibagAccountNativeForm'), ord=document.getElementById('dibagOrderNativeForm');
+ const acctFrame=document.getElementById('dibagAccountSubmitFrame'), ordFrame=document.getElementById('dibagOrderSubmitFrame');
+ const accountResult=document.getElementById('dibagAccountResult'), orderResult=document.getElementById('dibagOrderResult');
+ let acctSent=false, ordSent=false;
+ if(acct && acctFrame){acct.addEventListener('submit',()=>{acctSent=true;if(accountResult){accountResult.textContent='در حال ارسال اطلاعات…';accountResult.classList.add('pending');}});acctFrame.addEventListener('load',()=>{if(!acctSent)return;acctSent=false;if(accountResult){accountResult.textContent='ارسال انجام شد. (ثبت نهایی را نمی‌توان از این صفحه تأیید کرد.)';accountResult.classList.remove('pending');accountResult.classList.add('success');}try{localStorage.setItem('dibag_account_form_submitted','yes');}catch{}const status=document.getElementById('accountGateStatus');if(status)status.textContent='وضعیت: فرم ارسال شد؛ می‌توانی ادامه بدهی.';if(accountFormConfirm){accountFormConfirm.classList.remove('hidden');accountFormConfirm.innerHTML='<i class="fa-solid fa-arrow-left"></i> ادامه به ثبت سفارش';}});}
+ if(ord && ordFrame){ord.addEventListener('submit',()=>{ordSent=true;if(orderResult){orderResult.textContent='در حال ارسال درخواست…';orderResult.classList.add('pending');}});ordFrame.addEventListener('load',()=>{if(!ordSent)return;ordSent=false;if(orderResult){orderResult.textContent='ارسال درخواست انجام شد. (برای تأیید ثبت قطعی، پاسخ‌های Google Forms بررسی شود.)';orderResult.classList.remove('pending');orderResult.classList.add('success');}ord.reset();});}
+})();
 
 
 
@@ -890,6 +871,16 @@ document.querySelectorAll('.card').forEach(card=>{
   color: #68a1ff;
   letter-spacing: 3px;
 }
+
+/* DIBAG custom Google Forms UI — responsive laptop/mobile */
+.dibag-native-form-card{position:relative;overflow:hidden;width:min(100%,880px);margin:0 auto 18px;padding:clamp(18px,3vw,34px);border:1px solid rgba(112,159,231,.23);border-radius:26px;background:linear-gradient(145deg,rgba(15,22,36,.98),rgba(8,12,20,.98));box-shadow:0 22px 60px rgba(0,0,0,.28),inset 0 1px 0 rgba(255,255,255,.045);color:#eef4ff}
+.dibag-native-form-card:before{content:"";position:absolute;inset:-1px;pointer-events:none;background:radial-gradient(circle at 92% 0,rgba(52,128,255,.14),transparent 35%)}
+.dibag-native-form-head{position:relative;display:flex;align-items:center;gap:16px;margin-bottom:26px}.dibag-native-form-icon{flex:0 0 58px;width:58px;height:58px;display:grid;place-items:center;border-radius:18px;color:#8dc6ff;background:linear-gradient(145deg,rgba(45,118,232,.22),rgba(43,67,120,.12));border:1px solid rgba(107,169,255,.3);font-size:21px}.dibag-native-eyebrow{display:block;color:#7fb9ff;font-size:10px;font-weight:850;letter-spacing:2px;margin-bottom:5px}.dibag-native-form-head h3{margin:0 0 6px;font-size:clamp(18px,2.5vw,24px);color:#f3f7ff}.dibag-native-form-head p{margin:0;color:#a9b8ce;font-size:12px;line-height:1.9}
+.dibag-native-progress{position:relative;display:flex;gap:8px;align-items:center;margin:0 0 24px}.dibag-native-progress span{height:4px;flex:1;border-radius:99px;background:#243147}.dibag-native-progress span.active{background:linear-gradient(90deg,#378cff,#78baff);box-shadow:0 0 16px #348aff38}.dibag-native-progress small{color:#93a8c7;font-size:10px;white-space:nowrap;margin-right:4px}
+.dibag-native-grid{display:grid;grid-template-columns:repeat(2,minmax(0,1fr));gap:16px}.dibag-native-field{display:flex;min-width:0;flex-direction:column;gap:8px}.dibag-native-field>span{font-size:12px;color:#c5d2e5;font-weight:700}.dibag-native-field input,.dibag-native-field select,.dibag-native-field textarea{width:100%;min-width:0;box-sizing:border-box;border:1px solid rgba(130,158,201,.22);border-radius:14px;background:rgba(3,8,16,.58);color:#f1f6ff;padding:14px 15px;font:inherit;font-size:13px;outline:none;transition:border-color .2s,box-shadow .2s,background .2s}.dibag-native-field input::placeholder,.dibag-native-field textarea::placeholder{color:#6f829d}.dibag-native-field select{appearance:auto}.dibag-native-field textarea{resize:vertical;min-height:125px;line-height:1.9}.dibag-native-field input:focus,.dibag-native-field select:focus,.dibag-native-field textarea:focus{border-color:#5b9eff;background:rgba(8,17,32,.8);box-shadow:0 0 0 3px rgba(56,128,255,.13)}.dibag-native-wide{grid-column:1/-1}
+.dibag-native-submit{display:flex;align-items:center;justify-content:center;gap:12px;width:100%;margin-top:22px;padding:15px 18px;border:1px solid rgba(117,177,255,.36);border-radius:15px;background:linear-gradient(110deg,#206de0,#328cff);color:#fff;font:inherit;font-weight:850;font-size:14px;cursor:pointer;box-shadow:0 10px 28px rgba(23,99,222,.22);transition:transform .18s,filter .18s,box-shadow .18s}.dibag-native-submit:hover{transform:translateY(-2px);filter:brightness(1.07);box-shadow:0 14px 32px rgba(23,99,222,.28)}.dibag-native-submit:active{transform:scale(.99)}.dibag-native-privacy{margin:14px 0 0;text-align:center;font-size:10px;color:#8498b4;line-height:1.8}.dibag-native-privacy i{margin-left:5px;color:#80b8ff}.dibag-native-result{margin:10px 0 0;text-align:center;min-height:0;font-size:12px;line-height:1.9}.dibag-native-result:empty{display:none}.dibag-native-result.pending{color:#a7caff}.dibag-native-result.success{color:#78e0b3}.dibag-submit-frame{position:absolute;width:1px;height:1px;opacity:0;pointer-events:none;border:0}
+@media(max-width:640px){.dibag-native-form-card{padding:17px 14px;border-radius:20px;margin-bottom:14px}.dibag-native-form-head{gap:12px;margin-bottom:20px}.dibag-native-form-icon{width:47px;height:47px;flex-basis:47px;border-radius:15px;font-size:18px}.dibag-native-form-head p{font-size:11px}.dibag-native-grid{grid-template-columns:1fr;gap:13px}.dibag-native-wide{grid-column:auto}.dibag-native-field input,.dibag-native-field select,.dibag-native-field textarea{padding:13px 12px;border-radius:12px;font-size:14px}.dibag-native-submit{padding:14px;border-radius:13px;margin-top:18px}.dibag-native-progress{gap:6px;margin-bottom:18px}.dibag-native-progress small{font-size:9px}}
+@media(min-width:900px){.dibag-native-grid{gap:19px 22px}.dibag-native-form-card{padding:32px}.dibag-native-submit{max-width:420px;margin-right:auto;margin-left:auto}}
 </style>
 <script>
 
