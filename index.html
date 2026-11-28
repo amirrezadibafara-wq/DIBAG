@@ -584,7 +584,7 @@ h3{font-weight:750;line-height:1.65}
     <label class="dibag-native-field"><span>شهر</span><input name="entry.1894476463" autocomplete="address-level2" placeholder="نام شهر" required=""></label>
     <label class="dibag-native-field"><span>گزینه مربوطه</span><select name="entry.1383906254" required=""><option value="" disabled="" selected="">انتخاب کنید</option><option value="دارم">دارم</option><option value="ندارم">ندارم</option></select></label></div>
     <button class="dibag-native-submit" type="submit"><span>ثبت درخواست</span><i class="fa-solid fa-paper-plane"></i></button>
-    <p class="dibag-native-privacy"><i class="fa-solid fa-shield-halved"></i> درخواست برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagOrderResult" aria-live="polite">ارسال درخواست انجام شد.</p>
+    <p class="dibag-native-privacy"><i class="fa-solid fa-shield-halved"></i> درخواست برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagOrderResult" aria-live="polite"></p>
   </form><iframe name="dibagOrderSubmitFrame" id="dibagOrderSubmitFrame" title="ارسال سفارش به سامانه" class="dibag-submit-frame" aria-hidden="true"></iframe>
 </section>
 
@@ -600,13 +600,13 @@ h3{font-weight:750;line-height:1.65}
     <label class="dibag-native-field"><span>شهر</span><input name="entry.1025666400" autocomplete="address-level2" placeholder="نام شهر" required=""></label>
     <label class="dibag-native-field"><span>پاسخ گزینه‌ای</span><select name="entry.1783685393" required=""><option value="" disabled="" selected="">انتخاب کنید</option><option value="بله">بله</option><option value="خیر">خیر</option></select></label></div>
     <button class="dibag-native-submit" type="submit"><span>ثبت اطلاعات</span><i class="fa-solid fa-arrow-left"></i></button>
-    <p class="dibag-native-privacy"><i class="fa-solid fa-lock"></i> اطلاعات برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagAccountResult" aria-live="polite">ارسال انجام شد.</p>
+    <p class="dibag-native-privacy"><i class="fa-solid fa-lock"></i> اطلاعات برای ثبت در سامانه DIBAG ارسال می‌شود.</p><p class="dibag-native-result success" id="dibagAccountResult" aria-live="polite"></p>
   </form>
   <iframe name="dibagAccountSubmitFrame" id="dibagAccountSubmitFrame" title="ارسال حساب به سامانه" class="dibag-submit-frame" aria-hidden="true"></iframe>
 </section>
 
 <button class="btn" id="confirmAccountForm" type="button"><i class="fa-solid fa-arrow-left"></i> ادامه به ثبت سفارش</button>
-<p aria-live="polite" class="hint" id="accountGateStatus">وضعیت: فرم ارسال شد؛ می‌توانی ادامه بدهی.</p>
+<p aria-live="polite" class="hint" id="accountGateStatus">وضعیت: ابتدا فرم حساب کاربری را ارسال کن.</p>
 <div class="split hidden">
 <div class="panel">
 <div class="hidden" id="loggedBox">
@@ -691,16 +691,28 @@ menuBtn.addEventListener('click',()=>{
 document.addEventListener('keydown',e=>{if(e.key==='Escape'&&mobileNav.classList.contains('open')){mobileNav.classList.remove('open');menuBtn.setAttribute('aria-expanded','false');}});
 const accountFormConfirm=document.getElementById('confirmAccountForm');
 if(accountFormConfirm){accountFormConfirm.addEventListener('click',()=>go('order'));}
-// Custom DIBAG forms post directly to Google Forms response endpoints in hidden iframes.
+// Custom DIBAG forms submit directly to their matching Google Forms response endpoints.
 (()=>{
  const acct=document.getElementById('dibagAccountNativeForm'), ord=document.getElementById('dibagOrderNativeForm');
- const acctFrame=document.getElementById('dibagAccountSubmitFrame'), ordFrame=document.getElementById('dibagOrderSubmitFrame');
  const accountResult=document.getElementById('dibagAccountResult'), orderResult=document.getElementById('dibagOrderResult');
- let acctSent=false, ordSent=false;
- if(acct && acctFrame){acct.addEventListener('submit',()=>{acctSent=true;if(accountResult){accountResult.textContent='در حال ارسال اطلاعات…';accountResult.classList.add('pending');}try{const fields={name:acct.querySelector('[name="entry.1834264585"]').value.trim(),phone:acct.querySelector('[name="entry.1390779945"]').value.trim(),city:acct.querySelector('[name="entry.1025666400"]').value.trim(),choice:acct.querySelector('[name="entry.1783685393"]').value,submittedAt:new Date().toISOString()};localStorage.setItem('dibag_account_form_data',JSON.stringify(fields));}catch{}});acctFrame.addEventListener('load',()=>{if(!acctSent)return;acctSent=false;if(accountResult){accountResult.textContent='ارسال انجام شد.';accountResult.classList.remove('pending');accountResult.classList.add('success');}try{localStorage.setItem('dibag_account_form_submitted','yes');}catch{}const status=document.getElementById('accountGateStatus');if(status)status.textContent='وضعیت: فرم ارسال شد؛ می‌توانی ادامه بدهی.';if(accountFormConfirm){accountFormConfirm.classList.remove('hidden');accountFormConfirm.innerHTML='<i class="fa-solid fa-arrow-left"></i> ادامه به ثبت سفارش';}});}
- if(ord && ordFrame){ord.addEventListener('submit',()=>{ordSent=true;if(orderResult){orderResult.textContent='در حال ارسال درخواست…';orderResult.classList.add('pending');}});ordFrame.addEventListener('load',()=>{if(!ordSent)return;ordSent=false;if(orderResult){orderResult.textContent='ارسال درخواست انجام شد.';orderResult.classList.remove('pending');orderResult.classList.add('success');}ord.reset();});}
+ const accountFormConfirm=document.getElementById('confirmAccountForm');
+ if(acct){acct.addEventListener('submit',()=>{
+  if(accountResult){accountResult.textContent='درخواست ارسال شد؛ برای ادامه آماده‌ای.';accountResult.classList.remove('pending');accountResult.classList.add('success');}
+  try{
+   const fields={name:acct.querySelector('[name="entry.1834264585"]').value.trim(),phone:acct.querySelector('[name="entry.1390779945"]').value.trim(),city:acct.querySelector('[name="entry.1025666400"]').value.trim(),choice:acct.querySelector('[name="entry.1783685393"]').value,submittedAt:new Date().toISOString()};
+   localStorage.setItem('dibag_account_form_data',JSON.stringify(fields));
+   localStorage.setItem('dibag_account_form_submitted','yes');
+  }catch{}
+  const status=document.getElementById('accountGateStatus');
+  if(status)status.textContent='وضعیت: فرم ارسال شد؛ مرحله ثبت سفارش فعال است.';
+  if(accountFormConfirm)accountFormConfirm.classList.remove('hidden');
+ });}
+ if(ord){ord.addEventListener('submit',()=>{
+  if(orderResult){orderResult.textContent='درخواست در حال ارسال به فرم ثبت سفارش است…';orderResult.classList.remove('success');orderResult.classList.add('pending');}
+  // Hidden cross-origin Google Forms submissions cannot be reliably confirmed from this page.
+  setTimeout(()=>{if(orderResult){orderResult.textContent='فرم ارسال شد. برای اطمینان از ثبت، از مالک فرم بخواه پاسخ را در Responses بررسی کند.';}},1600);
+ });}
 })();
-
 
 
 function toast(msg){const el=document.getElementById('toast');el.textContent=msg;el.classList.add('show');clearTimeout(window._toast);window._toast=setTimeout(()=>el.classList.remove('show'),3200)}
